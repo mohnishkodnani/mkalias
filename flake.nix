@@ -37,7 +37,7 @@
           pkgs = nixpkgs.legacyPackages.${system};
         in {
           mkalias = pkgs.callPackage ./default.nix {
-            CoreFoundation = pkgs.apple_sdk.frameworks.CoreFoundation;
+            CoreFoundation = pkgs.apple-sdk_15.frameworks.CoreFoundation;
           };
           default = self.packages.${system}.mkalias;
         });
